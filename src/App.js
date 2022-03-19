@@ -1,10 +1,14 @@
 import logo from './logo.svg';
 import './App.css';
+import React, { useState } from 'react'
 
 function App() {
+  let [ counter, changeCounter ] = useState(1)
+  window.changeCounter = changeCounter
   return (
     <div className="App">
       <header className="App-header">
+      <h1>{counter}</h1>
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
@@ -17,6 +21,7 @@ function App() {
         >
           Learn React
         </a>
+        <h4>{counter}</h4>
       </header>
     </div>
   );
